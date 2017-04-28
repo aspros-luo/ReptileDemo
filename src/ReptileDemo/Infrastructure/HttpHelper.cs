@@ -14,9 +14,11 @@ namespace ReptileDemo.Infrastructure
         {
             try
             {
-                var webRequest = WebRequest.Create(url);
-                webRequest.ContentType = "text/html charset=utf-8";
-                webRequest.Method = "get";
+                var webRequest = WebRequest.Create(url) as HttpWebRequest;
+                webRequest.Accept = "application/json, text/javascript, */*; q=0.01";
+                webRequest.CookieContainer=new CookieContainer();
+                webRequest.Method = "Post";
+                webRequest.ContentType = "application/x-www-form-urlencoded; charset=UTF-8";
                 webRequest.UseDefaultCredentials = true;
                 var task = webRequest.GetResponseAsync();
                 var webResponse = task.Result;
@@ -24,7 +26,7 @@ namespace ReptileDemo.Infrastructure
                 var streamReader = new StreamReader(stream, Encoding.UTF8);
                 return streamReader.ReadToEnd();
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 return "";
             }

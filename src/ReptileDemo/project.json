@@ -1,15 +1,14 @@
-﻿{
+{
   "version": "1.0.0-*",
   "buildOptions": {
     "emitEntryPoint": true
   },
 
   "dependencies": {
-    "Microsoft.NETCore.App": {
-      "version": "1.1.0"
-    },
+    "Microsoft.NETCore.App": "1.1.1",
     "AngleSharp": "0.9.9",
-    "Pomelo.AspNetCore.TimedJob": "1.1.0-rtm-10026"
+    "Pomelo.AspNetCore.TimedJob": "1.1.0-rtm-10026",
+    "DotnetSpider2.Core": "1.0.14"
   },
 
   "frameworks": {

@@ -18,7 +18,7 @@ namespace ReptileDemo.BizModel
             //Create a (re-usable) parser front-end
             var parser = new HtmlParser();
             //Source to be pared
-            var source = HttpHelper.GetHtmlByUrl("https://www.cnblogs.com");
+            var source = HttpHelper.GetHtmlByUrl("https://www.lagou.com/jobs/positionAjax.json?city=杭州&kd=.net");
             //var source = "<h1>Some example source</h1><p>This is a paragraph element";
             //Parse source to document
             var document = parser.Parse(source);
